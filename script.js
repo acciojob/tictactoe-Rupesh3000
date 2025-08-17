@@ -29,7 +29,7 @@ const handleMove = (e) => {
 
     // check winner after placing
     if (checkWinner()) {
-      message.innerHTML = `${currentPlayer === "x" ? Player1.value : Player2.value} ongratulations you won!`;
+      message.innerHTML = `${currentPlayer === "x" ? Player1.value : Player2.value} congratulations you won!`;
       board.removeEventListener("click", handleMove); // stop further moves
       // setTimeout(() => {
       //   window.location.reload()
