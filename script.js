@@ -1,5 +1,5 @@
-const player_1 = document.getElementById("player-1");
-const player_2 = document.getElementById("player-2");
+const player_1 = document.getElementById("player1");
+const player_2 = document.getElementById("player2");
 const submit = document.getElementById("submit");
 const userContainer = document.querySelector(".user-container");
 const boardContainer = document.querySelector(".board-container");
