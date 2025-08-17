@@ -1,5 +1,5 @@
-const player_1 = document.getElementById("player1");
-const player_2 = document.getElementById("player2");
+const Player1 = document.getElementById("Player1");
+const Player2 = document.getElementById("Player2");
 const submit = document.getElementById("submit");
 const userContainer = document.querySelector(".user-container");
 const boardContainer = document.querySelector(".board-container");
@@ -10,11 +10,11 @@ let currentPlayer = "x";
 
 // Handle form submit
 const handleSubmit = () => {
-  if (player_1.value.trim() && player_2.value.trim()) {
+  if (Player1.value.trim() && Player2.value.trim()) {
     boardContainer.style.display = "block";
     userContainer.style.display = "none";
     // show message for first player
-    message.innerHTML = `${player_1.value}, you're up`;
+    message.innerHTML = `${Player1.value}, you're up`;
   } else {
     alert("Please enter both player names!");
   }
@@ -29,7 +29,7 @@ const handleMove = (e) => {
 
     // check winner after placing
     if (checkWinner()) {
-      message.innerHTML = `${currentPlayer === "x" ? player_1.value : player_2.value} ongratulations you won!`;
+      message.innerHTML = `${currentPlayer === "x" ? Player1.value : Player2.value} ongratulations you won!`;
       board.removeEventListener("click", handleMove); // stop further moves
       // setTimeout(() => {
       //   window.location.reload()
@@ -40,10 +40,10 @@ const handleMove = (e) => {
     // switch player if no winner
     if (currentPlayer === "x") {
       currentPlayer = "o";
-      message.innerHTML = `${player_2.value}, you're up`;
+      message.innerHTML = `${Player2.value}, you're up`;
     } else {
       currentPlayer = "x";
-      message.innerHTML = `${player_1.value}, you're up`;
+      message.innerHTML = `${Player1.value}, you're up`;
     }
   }
 };
